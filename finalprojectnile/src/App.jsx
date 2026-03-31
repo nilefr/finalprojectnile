@@ -42,12 +42,12 @@ function App() {
     <Carousel
       images={[
         "https://i.ytimg.com/vi/RJy_AL-zzTQ/maxresdefault.jpg",
-        "https://cdn.mos.cms.futurecdn.net/2a9e7b1c8c5f0e3b4d9f8a1b2c3d4e5.jpg",
-        "https://www.nasa.gov/sites/default/files/thumbnails/image/potw2046a.jpg"
+        "https://oaklandside.org/wp-content/uploads/2023/06/TEMPO-bus-ac-transit-1.jpg",
+        "https://www.sfmta.com/files/teaser-images/2024/01/210125_4th_bridge_01.jpg"
       ]}
-      caption="Amazing Space Images"
+      caption="Bay Area Transit"
     />
-    
+
     <Card />
     
     </>
