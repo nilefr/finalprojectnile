@@ -1,38 +1,31 @@
-import { useState } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
-import Card from "./components/Card.jsx";
+import NavBar from "./components/NavBar.jsx";
+import Footer from "./components/Footer.jsx";
 import Search from "./components/Search.jsx";
-import Hero from './components/Hero.jsx';
-import Carousel from './components/Carousel.jsx';
+import Hero from "./components/Hero.jsx";
+import Carousel from "./components/Carousel.jsx";
+import Card from "./components/Card.jsx";
 
 function App() {
-  
-
   return (
-    <>
-    <h1 className="text-4xl font-bold text-blue-600
-	bg-yellow-100 p-8 rounded-xl">
-  Tailwind is working!
-</h1>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
 
-    <h1>Welcome to My React App</h1>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </main>
 
-       <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
-        <Link to="/profile">Profile</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
     
     <Search onSearch={(query) => console.log("Search query:", query)} />
@@ -42,16 +35,16 @@ function App() {
     <Carousel
       images={[
         "https://i.ytimg.com/vi/RJy_AL-zzTQ/maxresdefault.jpg",
-        "https://oaklandside.org/wp-content/uploads/2023/06/TEMPO-bus-ac-transit-1.jpg",
-        "https://www.sfmta.com/files/teaser-images/2024/01/210125_4th_bridge_01.jpg"
+        "https://cdn.mos.cms.futurecdn.net/2a9e7b1c8c5f0e3b4d9f8a1b2c3d4e5.jpg",
+        "https://www.nasa.gov/sites/default/files/thumbnails/image/potw2046a.jpg"
       ]}
-      caption="Bay Area Transit"
+      caption="Amazing Space Images"
     />
-
+    
     <Card />
     
     </>
   )
 }
 
-export default App
+export default App;
