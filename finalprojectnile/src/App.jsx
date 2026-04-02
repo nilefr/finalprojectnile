@@ -29,13 +29,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
-    <Search onSearch={(query) => console.log("Search query:", query)} />
-    
-    
-
-   
-   
-    
+  
     
     </>
   )
