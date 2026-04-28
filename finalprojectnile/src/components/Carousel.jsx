@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
+// carousel component that displays images with navigation
 export default function Carousel({ images, caption }) {
+    // state to track the current image index
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // function to go to the previous image
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
         );
     };
 
+    // function to go to the next image
     const goToNext = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -16,35 +20,24 @@ export default function Carousel({ images, caption }) {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
-            <div className="relative w-full aspect-video bg-gray-200 rounded-lg overflow-hidden">
+        <div className="carousel-container">
+            {/* Display the current image */}
+            <div className="image-container">
                 <img
                     src={images[currentIndex]}
                     alt={`${caption} ${currentIndex + 1}`}
-                    className="w-full h-full object-cover"
+                    className="carousel-image"
                 />
             </div>
 
-            {caption && (
-                <p className="mt-3 text-lg font-semibold text-gray-700">{caption}</p>
-            )}
+            {/* Show caption if provided */}
+            {caption && <p className="caption">{caption}</p>}
 
-            <div className="flex gap-4 mt-6">
-                <button
-                    onClick={goToPrevious}
-                    className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-                >
-                    Previous
-                </button>
-                <span className="flex items-center text-gray-600">
-                    {currentIndex + 1} / {images.length}
-                </span>
-                <button
-                    onClick={goToNext}
-                    className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-                >
-                    Next
-                </button>
+            {/* Navigation buttons and counter */}
+            <div className="navigation">
+                <button onClick={goToPrevious}>Previous</button>
+                <span>{currentIndex + 1} / {images.length}</span>
+                <button onClick={goToNext}>Next</button>
             </div>
         </div>
     );
