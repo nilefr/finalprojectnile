@@ -13,8 +13,9 @@ export default function NavBar() {
 					<Link to="/" className="text-gray-700 hover:text-sky-600">Home</Link>
 					<Link to="/about" className="text-gray-700 hover:text-sky-600">About</Link>
 					<Link to="/profile" className="text-gray-700 hover:text-sky-600">Profile</Link>
-					<Link to="/info" className="text-gray-700 hover:text-sky-600">Info</Link>
-				</nav>
+				<Link to="/info" className="text-gray-700 hover:text-sky-600">Info</Link>
+				<Link to="/message" className="text-gray-700 hover:text-sky-600">Contact</Link>
+			</nav>
 			</div>
 		</header>
 	);

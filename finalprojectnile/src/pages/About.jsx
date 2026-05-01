@@ -4,6 +4,17 @@ function About() {
  return (
  <>
    <h1>About Page</h1>
+   <section className="max-w-4xl mx-auto px-4 py-6">
+     <h2 className="text-2xl font-semibold mb-3">Why public transit is underfunded</h2>
+     <ul className="list-disc list-inside space-y-2 text-gray-700">
+       <li>Budget priorities often favor roads and highways over transit systems.</li>
+       <li>Fare revenue usually covers only a small portion of operating costs.</li>
+       <li>Transit agencies rely heavily on unstable local and state subsidies.</li>
+       <li>Low public awareness makes it harder to build political support for funding.</li>
+       <li>Delays in capital projects and rising construction costs reduce available resources.</li>
+     </ul>
+   </section>
+  
    <Carousel
       images={[
         "https://i.ytimg.com/vi/RJy_AL-zzTQ/maxresdefault.jpg",
