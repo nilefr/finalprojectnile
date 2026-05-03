@@ -3,11 +3,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
+import Message from "./pages/Message";
+import Info from "./pages/Info";
 import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
 
+
+
 function App() {
   return (
+    <>
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
         <NavBar />
@@ -16,14 +21,19 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/message" element={<Message />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/info" element={<Info />} />
           </Routes>
         </main>
 
         <Footer />
       </div>
     </BrowserRouter>
-  );
+  
+    
+    </>
+  )
 }
 
 export default App;

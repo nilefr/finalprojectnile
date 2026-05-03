@@ -18,7 +18,7 @@ function Home() {
         <h2 className="text-2xl font-semibold mb-4">Policy ideas</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {policies.map((p) => (
-            <PolicyCard key={p.title} title={p.title} summary={p.summary} onAction={() => alert(p.title)} />
+            <PolicyCard key={p.title} title={p.title} summary={p.summary} link="/info" />
           ))}
         </div>
       </section>
