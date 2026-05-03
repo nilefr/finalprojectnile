@@ -28,8 +28,8 @@ function Home() {
       <section className="mt-6">
         <h3 className="text-xl font-semibold mb-3">What people say</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Testimonial name="Sam" quote="Transit helped me get to work." />
-          <Testimonial name="Priya" quote="More buses would help my neighborhood." />
+          <Testimonial name="Kanai" quote="Transit helped me get to work." />
+          <Testimonial name="Brian" quote="More buses would help my neighborhood." />
         </div>
       </section>
     </div>
