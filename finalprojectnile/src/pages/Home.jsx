@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import PolicyCard from "../components/PolicyCard.jsx";
 import CallToAction from "../components/CallToAction.jsx";
@@ -20,6 +21,18 @@ function Home() {
           {policies.map((p) => (
             <PolicyCard key={p.title} title={p.title} summary={p.summary} link="/info" />
           ))}
+        </div>
+      </section>
+
+      <section className="mt-8 rounded-3xl bg-slate-50 border border-slate-200 p-6 shadow-sm">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-2xl font-semibold">Want to learn more?</h3>
+            <p className="text-gray-600 mt-2">Explore the challenges behind funding, infrastructure, and transit access in the U.S.</p>
+          </div>
+          <Link to="/about" className="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-white font-semibold shadow-sm hover:bg-sky-700 transition">
+            Learn more
+          </Link>
         </div>
       </section>
 
